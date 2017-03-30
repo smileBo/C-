@@ -1,0 +1,1 @@
+DataTable dt_temp = dt.AsEnumerable().Cast<DataRow>().GroupBy(p => p.Field<string>("table_names_en")).Select(p => p.FirstOrDefault()).CopyToDataTable();
